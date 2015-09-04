@@ -3,7 +3,7 @@
  * git: https://github.com/itskhaledmohammad
  * twitter: https://twitter.com/itskhaledmd (@itskhaledmd)
  *
- * This program was written as challenge I found on the the internet.
+ * This program was written as challenge I found on the the internet.It looked fun so I did it!
  * Link to Problem: http://www.cprogramming.com/challenges/integer-to-english.html
  *
  * NOTE: It supports up to 999999999.
@@ -13,7 +13,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
-#include <stdint.h>
 
 // Macros.
 #define OUT_OF_RANGE 101
