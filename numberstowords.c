@@ -26,7 +26,7 @@ char *teens[9] ={"Eleven", "Tweleve","Thirteen", "Fourteen", "Fifteen", "Sixteen
 
 /*
  * This function is used to find a length
- * the length of a integer.
+ * the length of an integer.
  */
 int findLength(int Num)
 {
