@@ -33,6 +33,7 @@ int main(void){
                    }
                }
 
+               // Printing the result.
                if(totalStudent < k){
                    printf("YES\n");
                }
