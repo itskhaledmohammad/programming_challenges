@@ -2,10 +2,15 @@
 #include <stdlib.h>
 #include <assert.h>
 
+// We will be saving some huge integers.
 typedef unsigned long long int LLT;
+
 int main()
 {
-    LLT x = 0, y = 0, lastAns = 0, inx = 0, n = 0, q = 0, temp = 0, newSize = 1;
+    // Initialization.
+    LLT x = 0, y = 0, lastAns = 0, inx = 0, n = 0, q = 0, opt = 0, newSize = 1;
+
+    // Taking N and Q.
     scanf("%llu %llu", &n, &q);
 
     // Allocating a multidimensional array.
@@ -26,12 +31,15 @@ int main()
     }
 
     for(LLT i = 0; i < q; i++){
-        scanf("%llu %llu %llu", &temp, &x, &y);
+        scanf("%llu %llu %llu", &opt, &x, &y);
         inx = (x ^ lastAns) % n;
-        assert(inx >= 0);
-        if(temp == 1){
-            seqList[inx][0] += 1;
+        assert(inx >= 0);  // If the index is non-integer, kill it!
+        if(opt == 1){
+
+            seqList[inx][0] += 1;     // Increase the size by 1.
             newSize = seqList[inx][0];
+
+            // Reallocate memory for another LLT to fit.
             LLT* buffer = (LLT*) realloc(seqList[inx], newSize * sizeof(LLT));
             if (buffer == NULL){
                 free(seqList[inx]);
@@ -43,6 +51,7 @@ int main()
 
        }
         else{
+            // let lastAns be in the range from index 1 to size of the specific inx.
             lastAns = seqList[inx][(y % ((seqList[inx][0] - 1) + 1 - 1)  + 1)];
             printf("%llu\n", lastAns);
         }
