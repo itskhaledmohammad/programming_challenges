@@ -1,3 +1,14 @@
+/*
+ * AUTHOR: Khaled Mohammad
+ * DATED: May 9, 2017.
+ * git: https://github.com/itskhaledmohammad
+ * twitter: https://twitter.com/itskhaledmd (@itskhaledmd)
+ *
+ * It is practice problem which requires a implementation of dynamic array.
+ * Link to Problem: https://www.hackerrank.com/challenges/dynamic-array
+ *
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
